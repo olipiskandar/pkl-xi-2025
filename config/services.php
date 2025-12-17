@@ -35,13 +35,6 @@ return [
         ],
     ],
 
-    // ================================================
-    // KONFIGURASI GOOGLE OAUTH
-    // ================================================
-    // Socialite akan membaca konfigurasi dari sini
-    // Nama key 'google' sesuai dengan nama driver
-    // ================================================
-
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
