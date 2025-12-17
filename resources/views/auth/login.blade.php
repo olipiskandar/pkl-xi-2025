@@ -37,9 +37,7 @@ Menggunakan layout dari layouts/app.blade.php Halaman ini akan "masuk" ke bagian
                                 <input id="email" type="email"
                                     class="form-control @error('email')
               is-invalid @enderror"
-                                    {{-- ↑ @error('email') = jika ada error pada
-              field email, tambahkan class 'is-invalid' untuk styling merah --}} name="email" value="{{ old('email') }}" {{-- ↑ old('email') = isi
-              kembali nilai sebelumnya jika form gagal validasi --}}
+                                    {{-- ↑ @error('email')=jika ada error pada field email, tambahkan class 'is-invalid' untuk styling merah --}} name="email" value="{{ old('email') }}" {{-- ↑ old('email')=isi kembali nilai sebelumnya jika form gagal validasi --}}
                                     required autocomplete="email" autofocus placeholder="nama@email.com">
                                 {{--
               Tampilkan pesan error jika ada --}} @error('email')
@@ -53,14 +51,7 @@ Menggunakan layout dari layouts/app.blade.php Halaman ini akan "masuk" ke bagian
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
 
-                                <input id="password" type="password" {{--
-                ↑
-                type="password"
-                ="karakter"
-                akan
-                disembunyikan
-                (●●●●)
-                --}}
+                                <input id="password" type="password" {{-- ↑ type="password"="karakter" akan disembunyikan (●●●●) --}}
                                     class="form-control @error('password') is-invalid @enderror" name="password" required
                                     autocomplete="current-password" placeholder="••••••••" />
 
@@ -105,7 +96,7 @@ Menggunakan layout dari layouts/app.blade.php Halaman ini akan "masuk" ke bagian
             ================== --}} {{-- Tombol ini akan diaktifkan di Hari 4
             --}}
                             <div class="d-grid gap-2">
-                                <a href="#" class="btn btn-outline-danger">
+                                <a href="{{ route('auth.google') }}" class="btn btn-outline-danger">
                                     <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20"
                                         class="me-2" />
                                     Login dengan Google
